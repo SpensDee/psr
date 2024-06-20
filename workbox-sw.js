@@ -1,4 +1,4 @@
-const CACHE_NAME = `SW-v3`;
+const CACHE_NAME = `SW-v4`;
 const toCache = [];
 
 importScripts(
