@@ -2,13 +2,13 @@
   "name": "Plinko & MalinaCasino",
   "short_name": "Plinko & MalinaCasino",
   "description": "Plinko & MalinaCasino",
-  "start_url": "https://spensdee.github.io/psr/redirect.html",
-  "scope": "/",
-  "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "orientation": "portrait",
-  "id": "https://spensdee.github.io/psr/redirect.html",
+  "start_url": "/redirect.html",
+  "scope": "/",
+  "display": "standalone",
+  "id": "/redirect.html",
   "prefer_related_applications": false,
   "icons": [
     {
