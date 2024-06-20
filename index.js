@@ -2,25 +2,25 @@ var installButton = document.querySelector(".installButton");
 
 const installed = localStorage.getItem("installed");
 
-if ("getInstalledRelatedApps" in navigator) {
-  const relatedApps = await navigator.getInstalledRelatedApps();
-  const PWAisInstalled = relatedApps.length > 0;
+// if ("getInstalledRelatedApps" in navigator) {
+//   const relatedApps = await navigator.getInstalledRelatedApps();
+//   const PWAisInstalled = relatedApps.length > 0;
 
-  if (PWAisInstalled) {
-    console.log("PWA установлен");
-    document.querySelector(".txt").innerHTML = "Open";
-    installButton.addEventListener("click", playApp);
-  } else {
-    document.querySelector(".txt").innerHTML = "Install";
-  }
-}
-
-// if (installed === "1") {
-//   document.querySelector(".txt").innerHTML = "Open";
-//   installButton.addEventListener("click", playApp);
-// } else {
-//   document.querySelector(".txt").innerHTML = "Install";
+//   if (PWAisInstalled) {
+//     console.log("PWA установлен");
+//     document.querySelector(".txt").innerHTML = "Open";
+//     installButton.addEventListener("click", playApp);
+//   } else {
+//     document.querySelector(".txt").innerHTML = "Install";
+//   }
 // }
+
+if (installed === "1") {
+  document.querySelector(".txt").innerHTML = "Open";
+  installButton.addEventListener("click", playApp);
+} else {
+  document.querySelector(".txt").innerHTML = "Install";
+}
 
 function installation() {
   if (!installed) {
@@ -40,7 +40,7 @@ function installation() {
 
 function playApp() {
   window.open(`https://${window.location.hostname}/redirect.html`, "_blank");
-  // localStorage.setItem("installed", "1");
+  localStorage.setItem("installed", "1");
 }
 
 function runner() {
